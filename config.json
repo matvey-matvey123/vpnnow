@@ -1,0 +1,22 @@
+{
+  "countries": [
+    "netherlands", 
+    "ukraine", 
+    "germany", 
+    "latvia", 
+    "united_kingdom", 
+    "poland", 
+    "finland", 
+    "spain", 
+    "usa", 
+    "lithuania", 
+    "estonia", 
+    "france", 
+    "india", 
+    "canada", 
+    "russia"
+  ],
+  "max_servers_per_country": 10,
+  "timeout": 15,
+  "output_file": "working_servers.txt"
+}
