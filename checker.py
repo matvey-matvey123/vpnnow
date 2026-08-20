@@ -6,6 +6,7 @@ import sys
 from datetime import datetime
 from typing import List, Dict, Tuple
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from urllib.parse import unquote
 import requests
 import socket
 import urllib3
@@ -19,7 +20,6 @@ class VPNChecker:
         self.max_servers = self.config['max_servers_per_country']
         self.timeout = self.config['timeout']
         self.output_file = self.config['output_file']
-        self.original_configs = {}  # Сохраняем оригинальные конфигурации
         
     def load_subscriptions(self) -> List[str]:
         subscriptions = []
@@ -58,13 +58,16 @@ class VPNChecker:
         except:
             return False
     
-    def decode_url(self, text: str) -> str:
-        """Декодирование URL-encoded текста"""
+    def decode_name(self, name: str) -> str:
+        """Декодирование имени сервера"""
         try:
-            from urllib.parse import unquote
-            return unquote(text)
+            # Декодируем URL-encoded
+            decoded = unquote(name)
+            # Декодируем Unicode escape sequences
+            decoded = decoded.encode('utf-8').decode('unicode_escape', errors='ignore')
+            return decoded
         except:
-            return text
+            return name
     
     def parse_vmess(self, config: str) -> Dict:
         try:
@@ -74,14 +77,14 @@ class VPNChecker:
                 config_data += padding
                 decoded = base64.b64decode(config_data).decode('utf-8')
                 data = json.loads(decoded)
-                name = self.decode_url(data.get('ps', ''))
+                name = self.decode_name(data.get('ps', ''))
                 return {
                     'type': 'vmess',
                     'server': data.get('add', ''),
                     'port': int(data.get('port', 0)),
                     'country': self.detect_country(name),
                     'name': name,
-                    'original': config  # Сохраняем оригинальную конфигурацию
+                    'original': config
                 }
         except:
             pass
@@ -90,10 +93,11 @@ class VPNChecker:
     def parse_vless(self, config: str) -> Dict:
         try:
             if config.startswith('vless://'):
+                # Расширенный regex для разных форматов
                 match = re.match(r'vless://([^@]+)@([^:]+):(\d+)(?:\?([^#]*))?(?:#(.*))?', config)
                 if match:
                     uuid, server, port, params, name = match.groups()
-                    name = self.decode_url(name or '')
+                    name = self.decode_name(name or '')
                     return {
                         'type': 'vless',
                         'server': server,
@@ -112,7 +116,7 @@ class VPNChecker:
                 match = re.match(r'trojan://([^@]+)@([^:]+):(\d+)(?:\?([^#]*))?(?:#(.*))?', config)
                 if match:
                     password, server, port, params, name = match.groups()
-                    name = self.decode_url(name or '')
+                    name = self.decode_name(name or '')
                     return {
                         'type': 'trojan',
                         'server': server,
@@ -131,7 +135,7 @@ class VPNChecker:
                 match = re.match(r'ss://([^@]+)@([^:]+):(\d+)(?:#(.*))?', config)
                 if match:
                     encoded, server, port, name = match.groups()
-                    name = self.decode_url(name or '')
+                    name = self.decode_name(name or '')
                     return {
                         'type': 'shadowsocks',
                         'server': server,
@@ -145,28 +149,33 @@ class VPNChecker:
         return None
     
     def detect_country(self, name: str) -> str:
-        name = self.decode_url(name.lower())
+        """Улучшенное определение страны"""
+        name_lower = name.lower()
+        
+        # Расширенный список ключевых слов
         country_map = {
-            'netherlands': ['netherlands', 'nl', 'holland', 'нидерланды', 'amsterdam'],
-            'ukraine': ['ukraine', 'ua', 'ukr', 'украина', 'kyiv', 'kiev'],
-            'germany': ['germany', 'de', 'ger', 'германия', 'berlin', 'frankfurt', 'düsseldorf'],
-            'latvia': ['latvia', 'lv', 'латвия', 'riga'],
-            'united_kingdom': ['united kingdom', 'uk', 'gb', 'england', 'великобритания', 'лондон', 'london'],
-            'poland': ['poland', 'pl', 'польша', 'warsaw'],
-            'finland': ['finland', 'fi', 'финляндия', 'helsinki'],
-            'spain': ['spain', 'es', 'испания', 'madrid', 'barcelona'],
-            'usa': ['usa', 'us', 'united states', 'америка', 'сша', 'new york', 'los angeles'],
-            'lithuania': ['lithuania', 'lt', 'литва', 'vilnius'],
-            'estonia': ['estonia', 'ee', 'эстония', 'tallinn'],
-            'france': ['france', 'fr', 'франция', 'paris'],
-            'india': ['india', 'in', 'индия', 'mumbai', 'delhi'],
-            'canada': ['canada', 'ca', 'канада', 'toronto', 'vancouver'],
-            'russia': ['russia', 'ru', 'россия', 'moscow', 'москва']
+            'netherlands': ['netherlands', 'nl', 'holland', 'нидерланд', 'amsterdam', '🇳🇱'],
+            'ukraine': ['ukraine', 'ua', 'ukr', 'украин', 'kyiv', 'kiev', '🇺🇦'],
+            'germany': ['germany', 'de', 'ger', 'герман', 'berlin', 'frankfurt', 'düsseldorf', '🇩🇪'],
+            'latvia': ['latvia', 'lv', 'латви', 'riga', '🇱🇻'],
+            'united_kingdom': ['united kingdom', 'uk', 'gb', 'england', 'britain', 'великобритан', 
+                              'лондон', 'london', 'manchester', '🇬🇧'],
+            'poland': ['poland', 'pl', 'польш', 'warsaw', '🇵🇱'],
+            'finland': ['finland', 'fi', 'финлянд', 'helsinki', '🇫🇮'],
+            'spain': ['spain', 'es', 'испан', 'madrid', 'barcelona', '🇪🇸'],
+            'usa': ['usa', 'us', 'united states', 'америк', 'сша', 'new york', 
+                   'los angeles', 'chicago', 'miami', 'dallas', '🇺🇸'],
+            'lithuania': ['lithuania', 'lt', 'литв', 'vilnius', '🇱🇹'],
+            'estonia': ['estonia', 'ee', 'эстон', 'tallinn', '🇪🇪'],
+            'france': ['france', 'fr', 'франц', 'paris', '🇫🇷'],
+            'india': ['india', 'in', 'инди', 'mumbai', 'delhi', '🇮🇳'],
+            'canada': ['canada', 'ca', 'канад', 'toronto', 'vancouver', '🇨🇦'],
+            'russia': ['russia', 'ru', 'росси', 'moscow', 'москв', '🇷🇺']
         }
         
         for country in self.countries:
             for keyword in country_map.get(country, []):
-                if keyword in name:
+                if keyword in name_lower:
                     return country
         return 'unknown'
     
@@ -175,7 +184,7 @@ class VPNChecker:
             server = server_info['server']
             port = server_info['port']
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            sock.settimeout(3)
+            sock.settimeout(2)  # Уменьшаем таймаут для скорости
             result = sock.connect_ex((server, port))
             sock.close()
             return server_info, result == 0
@@ -187,8 +196,10 @@ class VPNChecker:
         subscriptions = self.load_subscriptions()
         
         all_servers = []
+        seen_servers = set()  # Для удаления дубликатов
         
         for sub_url in subscriptions:
+            print(f"Processing: {sub_url[:50]}...")
             content = self.fetch_subscription(sub_url)
             if content:
                 lines = content.split('\n')
@@ -197,6 +208,7 @@ class VPNChecker:
                     if not line:
                         continue
                     
+                    server = None
                     if line.startswith('vmess://'):
                         server = self.parse_vmess(line)
                     elif line.startswith('vless://'):
@@ -205,14 +217,17 @@ class VPNChecker:
                         server = self.parse_trojan(line)
                     elif line.startswith('ss://'):
                         server = self.parse_shadowsocks(line)
-                    else:
-                        continue
                     
                     if server and server['country'] in self.countries:
-                        all_servers.append(server)
+                        # Удаляем дубликаты
+                        server_key = f"{server['server']}:{server['port']}"
+                        if server_key not in seen_servers:
+                            seen_servers.add(server_key)
+                            all_servers.append(server)
         
-        print(f"Found {len(all_servers)} servers")
+        print(f"Found {len(all_servers)} unique servers")
         
+        # Проверяем серверы
         working_servers = {country: [] for country in self.countries}
         checked = 0
         
@@ -231,18 +246,24 @@ class VPNChecker:
                             working_servers[country].append(server_info)
                 except:
                     checked += 1
+                
+                if checked % 50 == 0:
+                    print(f"Checked: {checked}/{len(all_servers)}")
         
-        # Сохраняем только чистые конфигурации
+        # Сохраняем чистые конфигурации
         with open(self.output_file, 'w', encoding='utf-8') as f:
             for country in self.countries:
-                if working_servers[country]:
-                    for server in working_servers[country]:
-                        # Записываем оригинальную конфигурацию без изменений
-                        f.write(server['original'] + '\n')
+                for server in working_servers[country]:
+                    f.write(server['original'] + '\n')
         
+        # Выводим статистику
         total = sum(len(s) for s in working_servers.values())
-        print(f"Working servers: {total}")
-        print(f"Saved to {self.output_file}")
+        print(f"\nWorking servers: {total}")
+        for country in self.countries:
+            if working_servers[country]:
+                print(f"{country}: {len(working_servers[country])}")
+        
+        print(f"\nSaved to {self.output_file}")
 
 if __name__ == "__main__":
     checker = VPNChecker()
