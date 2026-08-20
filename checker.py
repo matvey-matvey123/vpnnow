@@ -1,10 +1,4 @@
 #!/usr/bin/env python3
-"""
-VPN Server Checker
-Скрипт для проверки VPN серверов из подписок
-Определяет рабочие серверы в нужных странах
-"""
-
 import base64
 import json
 import re
@@ -14,62 +8,48 @@ from typing import List, Dict, Tuple
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import requests
 import socket
-
-# Отключаем предупреждения SSL для ускорения работы
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 class VPNChecker:
-    """Основной класс для проверки VPN серверов"""
-    
     def __init__(self):
-        """Инициализация и загрузка конфигурации"""
         with open('config.json', 'r', encoding='utf-8') as f:
             self.config = json.load(f)
         self.countries = self.config['countries']
         self.max_servers = self.config['max_servers_per_country']
         self.timeout = self.config['timeout']
         self.output_file = self.config['output_file']
+        self.original_configs = {}  # Сохраняем оригинальные конфигурации
         
     def load_subscriptions(self) -> List[str]:
-        """Загрузка ссылок на подписки из файла"""
         subscriptions = []
         try:
             with open('subscriptions.txt', 'r', encoding='utf-8') as f:
                 for line in f:
                     line = line.strip()
-                    # Пропускаем пустые строки и комментарии
                     if line and not line.startswith('#'):
                         subscriptions.append(line)
         except FileNotFoundError:
-            print("❌ Файл subscriptions.txt не найден")
+            print("File not found")
             sys.exit(1)
         return subscriptions
     
     def fetch_subscription(self, url: str) -> str:
-        """Получение содержимого подписки по URL"""
         try:
-            response = requests.get(
-                url, 
-                timeout=self.timeout,
-                verify=False,
-                headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
-            )
+            response = requests.get(url, timeout=10, verify=False, headers={'User-Agent': 'Mozilla/5.0'})
             if response.status_code == 200:
                 content = response.text
-                # Проверяем, закодирован ли контент в base64
                 if self.is_base64(content):
                     try:
                         content = base64.b64decode(content).decode('utf-8')
                     except:
                         pass
                 return content
-        except Exception as e:
-            print(f"⚠️ Ошибка при загрузке {url}: {str(e)}")
+        except:
+            pass
         return ""
     
     def is_base64(self, s: str) -> bool:
-        """Проверка, является ли строка base64"""
         try:
             if len(s) % 4 != 0:
                 return False
@@ -78,111 +58,112 @@ class VPNChecker:
         except:
             return False
     
+    def decode_url(self, text: str) -> str:
+        """Декодирование URL-encoded текста"""
+        try:
+            from urllib.parse import unquote
+            return unquote(text)
+        except:
+            return text
+    
     def parse_vmess(self, config: str) -> Dict:
-        """Парсинг VMess конфигурации"""
         try:
             if config.startswith('vmess://'):
-                config = config.replace('vmess://', '')
-                # Добавляем padding для корректного декодирования
-                padding = '=' * (4 - len(config) % 4) if len(config) % 4 != 0 else ''
-                config += padding
-                decoded = base64.b64decode(config).decode('utf-8')
+                config_data = config.replace('vmess://', '')
+                padding = '=' * (4 - len(config_data) % 4) if len(config_data) % 4 != 0 else ''
+                config_data += padding
+                decoded = base64.b64decode(config_data).decode('utf-8')
                 data = json.loads(decoded)
+                name = self.decode_url(data.get('ps', ''))
                 return {
                     'type': 'vmess',
                     'server': data.get('add', ''),
                     'port': int(data.get('port', 0)),
-                    'country': self.detect_country(data.get('ps', '')),
-                    'name': data.get('ps', 'Unknown')
+                    'country': self.detect_country(name),
+                    'name': name,
+                    'original': config  # Сохраняем оригинальную конфигурацию
                 }
-        except Exception as e:
+        except:
             pass
         return None
     
     def parse_vless(self, config: str) -> Dict:
-        """Парсинг VLESS конфигурации"""
         try:
             if config.startswith('vless://'):
-                # vless://uuid@server:port?params#name
                 match = re.match(r'vless://([^@]+)@([^:]+):(\d+)(?:\?([^#]*))?(?:#(.*))?', config)
                 if match:
                     uuid, server, port, params, name = match.groups()
+                    name = self.decode_url(name or '')
                     return {
                         'type': 'vless',
                         'server': server,
                         'port': int(port),
-                        'country': self.detect_country(name or ''),
-                        'name': name or 'Unknown'
+                        'country': self.detect_country(name),
+                        'name': name,
+                        'original': config
                     }
         except:
             pass
         return None
     
     def parse_trojan(self, config: str) -> Dict:
-        """Парсинг Trojan конфигурации"""
         try:
             if config.startswith('trojan://'):
-                # trojan://password@server:port?params#name
                 match = re.match(r'trojan://([^@]+)@([^:]+):(\d+)(?:\?([^#]*))?(?:#(.*))?', config)
                 if match:
                     password, server, port, params, name = match.groups()
+                    name = self.decode_url(name or '')
                     return {
                         'type': 'trojan',
                         'server': server,
                         'port': int(port),
-                        'country': self.detect_country(name or ''),
-                        'name': name or 'Unknown'
+                        'country': self.detect_country(name),
+                        'name': name,
+                        'original': config
                     }
         except:
             pass
         return None
     
     def parse_shadowsocks(self, config: str) -> Dict:
-        """Парсинг Shadowsocks конфигурации"""
         try:
             if config.startswith('ss://'):
-                # ss://base64(method:password)@server:port#name
                 match = re.match(r'ss://([^@]+)@([^:]+):(\d+)(?:#(.*))?', config)
                 if match:
                     encoded, server, port, name = match.groups()
-                    # Декодируем method:password
-                    padding = '=' * (4 - len(encoded) % 4) if len(encoded) % 4 != 0 else ''
-                    decoded = base64.b64decode(encoded + padding).decode('utf-8')
+                    name = self.decode_url(name or '')
                     return {
                         'type': 'shadowsocks',
                         'server': server,
                         'port': int(port),
-                        'country': self.detect_country(name or ''),
-                        'name': name or 'Unknown'
+                        'country': self.detect_country(name),
+                        'name': name,
+                        'original': config
                     }
         except:
             pass
         return None
     
     def detect_country(self, name: str) -> str:
-        """Определение страны из имени сервера"""
-        name = name.lower()
+        name = self.decode_url(name.lower())
         country_map = {
             'netherlands': ['netherlands', 'nl', 'holland', 'нидерланды', 'amsterdam'],
             'ukraine': ['ukraine', 'ua', 'ukr', 'украина', 'kyiv', 'kiev'],
-            'germany': ['germany', 'de', 'ger', 'германия', 'berlin', 'frankfurt'],
+            'germany': ['germany', 'de', 'ger', 'германия', 'berlin', 'frankfurt', 'düsseldorf'],
             'latvia': ['latvia', 'lv', 'латвия', 'riga'],
-            'united_kingdom': ['united kingdom', 'uk', 'gb', 'england', 'великобритания', 
-                              'лондон', 'london', 'manchester'],
+            'united_kingdom': ['united kingdom', 'uk', 'gb', 'england', 'великобритания', 'лондон', 'london'],
             'poland': ['poland', 'pl', 'польша', 'warsaw'],
             'finland': ['finland', 'fi', 'финляндия', 'helsinki'],
             'spain': ['spain', 'es', 'испания', 'madrid', 'barcelona'],
-            'usa': ['usa', 'us', 'united states', 'америка', 'сша', 'new york', 
-                   'los angeles', 'chicago', 'miami', 'dallas'],
+            'usa': ['usa', 'us', 'united states', 'америка', 'сша', 'new york', 'los angeles'],
             'lithuania': ['lithuania', 'lt', 'литва', 'vilnius'],
             'estonia': ['estonia', 'ee', 'эстония', 'tallinn'],
             'france': ['france', 'fr', 'франция', 'paris'],
             'india': ['india', 'in', 'индия', 'mumbai', 'delhi'],
             'canada': ['canada', 'ca', 'канада', 'toronto', 'vancouver'],
-            'russia': ['russia', 'ru', 'россия', 'moscow', 'москва', 'saint petersburg']
+            'russia': ['russia', 'ru', 'россия', 'moscow', 'москва']
         }
         
-        # Проверяем каждую страну
         for country in self.countries:
             for keyword in country_map.get(country, []):
                 if keyword in name:
@@ -190,44 +171,32 @@ class VPNChecker:
         return 'unknown'
     
     def check_server(self, server_info: Dict) -> Tuple[Dict, bool]:
-        """Проверка доступности сервера"""
         try:
             server = server_info['server']
             port = server_info['port']
-            
-            # Пытаемся установить TCP соединение
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            sock.settimeout(self.timeout)
+            sock.settimeout(3)
             result = sock.connect_ex((server, port))
             sock.close()
-            
-            if result == 0:
-                return server_info, True
-            return server_info, False
+            return server_info, result == 0
         except:
             return server_info, False
     
     def process_subscriptions(self):
-        """Основной метод обработки подписок"""
-        print("🔄 Загрузка подписок...")
+        print("Loading subscriptions...")
         subscriptions = self.load_subscriptions()
-        print(f"📥 Найдено {len(subscriptions)} подписок")
         
         all_servers = []
         
-        # Обрабатываем каждую подписку
-        for i, sub_url in enumerate(subscriptions, 1):
-            print(f"📥 [{i}/{len(subscriptions)}] Загрузка: {sub_url[:50]}...")
+        for sub_url in subscriptions:
             content = self.fetch_subscription(sub_url)
             if content:
-                # Разделяем на строки и парсим конфигурации
                 lines = content.split('\n')
                 for line in lines:
                     line = line.strip()
                     if not line:
                         continue
                     
-                    # Парсим в зависимости от типа
                     if line.startswith('vmess://'):
                         server = self.parse_vmess(line)
                     elif line.startswith('vless://'):
@@ -239,63 +208,42 @@ class VPNChecker:
                     else:
                         continue
                     
-                    # Добавляем только серверы из нужных стран
                     if server and server['country'] in self.countries:
                         all_servers.append(server)
         
-        print(f"\n📊 Найдено {len(all_servers)} серверов из выбранных стран")
+        print(f"Found {len(all_servers)} servers")
         
-        # Проверяем серверы
-        print("🔍 Проверка доступности серверов...")
         working_servers = {country: [] for country in self.countries}
         checked = 0
         
-        # Используем многопоточность для ускорения
-        with ThreadPoolExecutor(max_workers=20) as executor:
+        # 100 потоков
+        with ThreadPoolExecutor(max_workers=100) as executor:
             futures = [executor.submit(self.check_server, server) for server in all_servers]
             
             for future in as_completed(futures):
-                server_info, is_working = future.result()
-                checked += 1
-                
-                if is_working and server_info['country'] in self.countries:
-                    country = server_info['country']
-                    if len(working_servers[country]) < self.max_servers:
-                        working_servers[country].append(server_info)
-                
-                # Обновляем прогресс
-                print(f"✓ Проверено {checked}/{len(all_servers)} серверов", end='\r')
+                try:
+                    server_info, is_working = future.result(timeout=5)
+                    checked += 1
+                    
+                    if is_working and server_info['country'] in self.countries:
+                        country = server_info['country']
+                        if len(working_servers[country]) < self.max_servers:
+                            working_servers[country].append(server_info)
+                except:
+                    checked += 1
         
-        print("\n" + "="*60)
-        print("📋 РЕЗУЛЬТАТЫ ПРОВЕРКИ:")
-        print("="*60)
-        
-        # Сохраняем результаты в файл
+        # Сохраняем только чистые конфигурации
         with open(self.output_file, 'w', encoding='utf-8') as f:
-            f.write(f"# Рабочие VPN серверы\n")
-            f.write(f"# Дата проверки: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-            f.write(f"# Всего рабочих серверов: {sum(len(s) for s in working_servers.values())}\n\n")
-            
             for country in self.countries:
                 if working_servers[country]:
-                    print(f"\n📍 {country.upper()}: {len(working_servers[country])} серверов")
-                    f.write(f"## {country.upper()} ({len(working_servers[country])} серверов)\n")
-                    
                     for server in working_servers[country]:
-                        print(f"  ✅ {server['type'].upper()} - {server['server']}:{server['port']} - {server['name']}")
-                        f.write(f"  - {server['type'].upper()} | {server['server']}:{server['port']} | {server['name']}\n")
-                    
-                    f.write("\n")
-                else:
-                    print(f"\n❌ {country.upper()}: нет рабочих серверов")
+                        # Записываем оригинальную конфигурацию без изменений
+                        f.write(server['original'] + '\n')
         
-        total_working = sum(len(servers) for servers in working_servers.values())
-        print(f"\n{'='*60}")
-        print(f"✅ ИТОГО рабочих серверов: {total_working}")
-        print(f"💾 Результаты сохранены в {self.output_file}")
-        print(f"{'='*60}")
+        total = sum(len(s) for s in working_servers.values())
+        print(f"Working servers: {total}")
+        print(f"Saved to {self.output_file}")
 
 if __name__ == "__main__":
-    # Создаем экземпляр класса и запускаем проверку
     checker = VPNChecker()
     checker.process_subscriptions()
