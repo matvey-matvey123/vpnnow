@@ -9,6 +9,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from urllib.parse import unquote
 import requests
 import socket
+import ssl
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -20,20 +21,6 @@ class VPNChecker:
         self.max_servers = self.config['max_servers_per_country']
         self.timeout = self.config['timeout']
         self.output_file = self.config['output_file']
-        
-        # Российские прокси для проверки (обновленный список)
-        self.russian_proxies = [
-            "http://45.8.158.176:10801",
-            "http://31.172.67.43:443",
-            "http://171.22.134.12:443",
-            "http://185.246.152.159:443",
-            "http://91.132.197.5:443",
-            "http://65.21.240.108:443",
-            "http://65.109.134.191:80",
-            "http://95.216.186.191:80",
-            "http://85.206.165.36:443",
-            "http://85.206.168.71:30000"
-        ]
         
     def load_subscriptions(self) -> List[str]:
         subscriptions = []
@@ -49,7 +36,6 @@ class VPNChecker:
         return subscriptions
     
     def fetch_subscription(self, url: str) -> str:
-        """Загрузка подписки"""
         try:
             response = requests.get(
                 url, 
@@ -192,36 +178,68 @@ class VPNChecker:
         return 'unknown'
     
     def check_server(self, server_info: Dict) -> Tuple[Dict, bool]:
-        """Проверка сервера"""
+        """Множественная проверка сервера"""
         server = server_info['server']
         port = server_info['port']
         
-        # Простая TCP проверка
+        # Метод 1: TCP соединение
+        if self.check_tcp(server, port):
+            return server_info, True
+        
+        # Метод 2: HTTP запрос
+        if self.check_http(server, port):
+            return server_info, True
+        
+        # Метод 3: HTTPS запрос
+        if self.check_https(server, port):
+            return server_info, True
+        
+        # Метод 4: DNS резолв
+        if self.check_dns(server):
+            return server_info, True
+        
+        return server_info, False
+    
+    def check_tcp(self, server: str, port: int) -> bool:
         try:
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            sock.settimeout(3)
+            sock.settimeout(2)
             result = sock.connect_ex((server, port))
             sock.close()
-            
-            if result == 0:
-                return server_info, True
+            return result == 0
         except:
-            pass
-        
-        # Пробуем через HTTP
+            return False
+    
+    def check_http(self, server: str, port: int) -> bool:
         try:
             response = requests.get(
                 f"http://{server}:{port}",
-                timeout=3,
+                timeout=2,
                 verify=False,
                 headers={'User-Agent': 'Mozilla/5.0'}
             )
-            if response.status_code < 500:
-                return server_info, True
+            return response.status_code < 500
         except:
-            pass
-        
-        return server_info, False
+            return False
+    
+    def check_https(self, server: str, port: int) -> bool:
+        try:
+            response = requests.get(
+                f"https://{server}:{port}",
+                timeout=2,
+                verify=False,
+                headers={'User-Agent': 'Mozilla/5.0'}
+            )
+            return response.status_code < 500
+        except:
+            return False
+    
+    def check_dns(self, server: str) -> bool:
+        try:
+            socket.gethostbyname(server)
+            return True
+        except:
+            return False
     
     def process_subscriptions(self):
         print("Loading subscriptions...")
@@ -250,7 +268,7 @@ class VPNChecker:
                     elif line.startswith('ss://'):
                         server = self.parse_shadowsocks(line)
                     
-                    if server and server['country'] in self.countries:
+                    if server:
                         server_key = f"{server['server']}:{server['port']}"
                         if server_key not in seen_servers:
                             seen_servers.add(server_key)
@@ -258,8 +276,8 @@ class VPNChecker:
         
         print(f"Found {len(all_servers)} unique servers")
         
-        # Проверяем ВСЕ серверы без ограничения по странам
-        working_servers = {country: [] for country in self.countries}
+        # Проверяем все серверы
+        working_servers = []
         checked = 0
         
         # 100 потоков
@@ -272,35 +290,39 @@ class VPNChecker:
                     checked += 1
                     
                     if is_working:
-                        country = server_info['country']
-                        if country in self.countries:
-                            if len(working_servers[country]) < self.max_servers:
-                                working_servers[country].append(server_info)
+                        working_servers.append(server_info)
                 except:
                     checked += 1
                 
                 if checked % 50 == 0:
                     print(f"Checked: {checked}/{len(all_servers)}")
         
-        # Сохраняем ВСЕ рабочие конфигурации
+        # Группируем по странам
+        country_servers = {country: [] for country in self.countries}
+        for server in working_servers:
+            country = server['country']
+            if country in self.countries:
+                if len(country_servers[country]) < self.max_servers:
+                    country_servers[country].append(server)
+        
+        # Сохраняем чистые конфигурации
         with open(self.output_file, 'w', encoding='utf-8') as f:
             for country in self.countries:
-                for server in working_servers[country]:
+                for server in country_servers[country]:
                     f.write(server['original'] + '\n')
         
-        # Сохраняем также отдельный файл со всеми рабочими
+        # Сохраняем все рабочие
         with open('all_working.txt', 'w', encoding='utf-8') as f:
-            for country in self.countries:
-                for server in working_servers[country]:
-                    f.write(server['original'] + '\n')
+            for server in working_servers:
+                f.write(server['original'] + '\n')
         
-        total = sum(len(s) for s in working_servers.values())
-        print(f"\nWorking servers: {total}")
+        total = len(working_servers)
+        print(f"\nTotal working servers: {total}")
         for country in self.countries:
-            if working_servers[country]:
-                print(f"{country}: {len(working_servers[country])}")
+            if country_servers[country]:
+                print(f"{country}: {len(country_servers[country])}")
         
-        print(f"\nSaved to {self.output_file}")
+        print(f"\nSaved to {self.output_file} and all_working.txt")
 
 if __name__ == "__main__":
     checker = VPNChecker()
