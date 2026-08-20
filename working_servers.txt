@@ -1,127 +1,99 @@
-
-
-## NETHERLANDS (10 серверов)
-  VLESS45.128.235.158:8443%F0%9F%87%AB%F0%9F%87%AE%20Finland%2C%20Helsinki%20%7C%20%5BBL%5D
-  VLESS | 144.31.82.201.fwqfw783rg2dad.website:443 | %F0%9F%87%AB%F0%9F%87%AE%20Finland%2C%20Helsinki%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
-  VLESS | 45.128.235.158:8443 | %F0%9F%87%AB%F0%9F%87%AE%20Finland%2C%20Helsinki%20%7C%20%5BBL%5D
-  VLESS | finnode3.frost-api.com:443 | %F0%9F%87%AB%F0%9F%87%AE%20Finland%2C%20Helsinki%20%7C%20%5BBL%5D
-  VLESS | finnode3.frost-api.com:443 | %F0%9F%87%AB%F0%9F%87%AE%20Finland%2C%20Helsinki%20%7C%20%5BBL%5D
-  VLESS | alya.chick-team.ru:6450 | %F0%9F%87%AB%F0%9F%87%AE%20Finland%2C%20Helsinki%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
-  VLESS | 217.60.35.41:443 | %F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%2C%20Amsterdam%20%7C%20%5BBL%5D
-  VLESS | nl2.noode.work:443 | %F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%2C%20Amsterdam%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
-  VLESS | 167.104.217.47:443 | %F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%2C%20Eygelshoven%20%7C%20%5BBL%5D
-  VLESS | nl-cdn.ru:443 | %F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%2C%20Amsterdam%20%7C%20%5BBL%5D
-
-## GERMANY (10 серверов)
-  - VLESS | 45.154.98.72:1000 | %F0%9F%87%A9%F0%9F%87%AA%20Germany%2C%20D%C3%BCsseldorf%20%28Stadtbezirk%20IX%29%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
-  - VLESS | 45.154.98.72:1000 | %F0%9F%87%A9%F0%9F%87%AA%20Germany%2C%20D%C3%BCsseldorf%20%28Stadtbezirk%20IX%29%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
-  - VLESS | 177.3.212.155:8443 | %F0%9F%87%A7%F0%9F%87%B7%20Brazil%2C%20Aparecida%20de%20Goi%C3%A2nia%20%7C%20%5BBL%5D
-  - VLESS | 177.3.212.155:8443 | %F0%9F%87%A7%F0%9F%87%B7%20Brazil%2C%20Aparecida%20de%20Goi%C3%A2nia%20%7C%20%5BBL%5D
-  - VLESS | 177.3.212.155:8443 | %F0%9F%87%A7%F0%9F%87%B7%20Brazil%2C%20Aparecida%20de%20Goi%C3%A2nia%20%7C%20%5BBL%5D
-  - VLESS | 177.3.212.155:8443 | %F0%9F%87%A7%F0%9F%87%B7%20Brazil%2C%20Aparecida%20de%20Goi%C3%A2nia%20%7C%20%5BBL%5D
-  - VLESS | 144.31.179.21:8443 | %F0%9F%87%B8%F0%9F%87%AA%20Sweden%2C%20Stockholm%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
-  - VLESS | 177.3.212.155:8443 | %F0%9F%87%A7%F0%9F%87%B7%20Brazil%2C%20Aparecida%20de%20Goi%C3%A2nia%20%7C%20%5BBL%5D
-  - SHADOWSOCKS | 209.46.102.22:8388 | %F0%9F%87%A9%F0%9F%87%AADE-209.46.102.22-0234
-  - VLESS | get4s.skystreamgame.com:8443 | %F0%9F%87%B8%F0%9F%87%AA%20Sweden%2C%20Stockholm%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
-
-## UNITED_KINGDOM (10 серверов)
-  - VLESS | api.getsavesafe.space:443 | %F0%9F%87%AC%F0%9F%87%A7%20United%20Kingdom%2C%20London%20%7C%20%5BBL%5D
-  - VLESS | api.getsavesafe.space:443 | %F0%9F%87%AC%F0%9F%87%A7%20United%20Kingdom%2C%20London%20%7C%20%5BBL%5D
-  - SHADOWSOCKS | 82.38.31.210:8080 | %F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.210-0125
-  - SHADOWSOCKS | 82.38.31.34:8080 | %F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.34-0095
-  - SHADOWSOCKS | 82.38.31.179:8080 | %F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.179-0124
-  - SHADOWSOCKS | 82.38.31.187:8080 | %F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.187-0097
-  - SHADOWSOCKS | 82.38.31.49:8080 | %F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.49-0105
-  - SHADOWSOCKS | 82.38.31.180:8080 | %F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.180-0883
-  - SHADOWSOCKS | 82.38.31.35:443 | %F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.35-0115
-  - SHADOWSOCKS | 82.38.31.189:8080 | %F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.189-0098
-
-## POLAND (10 серверов)
-  - VLESS | 45.144.49.228:443 | %F0%9F%87%B5%F0%9F%87%B1%20Poland%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
-  - VLESS | 45.144.48.56:443 | %F0%9F%87%B5%F0%9F%87%B1%20Poland%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
-  - VLESS | 45.144.49.228:443 | %F0%9F%87%B5%F0%9F%87%B1%20Poland%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
-  - VLESS | 45.144.49.200:443 | %F0%9F%87%B5%F0%9F%87%B1%20Poland%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
-  - VLESS | 45.144.49.231:443 | %F0%9F%87%B5%F0%9F%87%B1%20Poland%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
-  - VLESS | 45.144.51.161:443 | %F0%9F%87%B5%F0%9F%87%B1%20Poland%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
-  - VLESS | 45.144.51.161:443 | %F0%9F%87%B5%F0%9F%87%B1%20Poland%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
-  - VLESS | 45.144.51.161:443 | %F0%9F%87%B5%F0%9F%87%B1%20Poland%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
-  - VLESS | 45.144.49.79:443 | %F0%9F%87%B5%F0%9F%87%B1%20Poland%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
-  - VLESS | 82.22.40.147:443 | %F0%9F%87%B5%F0%9F%87%B1%20Poland%2C%20Warsaw%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
-
-## FINLAND (5 серверов)
-  - VMESS | 95.216.186.191:80 | 🇫🇮FI-95.216.186.191-1149
-  - VMESS | 91.132.197.5:443 | 🇫🇮FI-91.132.197.5-1218
-  - VMESS | 65.21.240.108:443 | 🇫🇮FI-65.21.240.108-3942
-  - VMESS | 65.109.134.191:80 | 🇫🇮FI-65.109.134.191-4673
-  - VMESS | 185.246.152.159:443 | 🇫🇮FI芬兰
-
-## SPAIN (10 серверов)
-  - VLESS | 89.37.192.144:8443 | %F0%9F%87%B7%F0%9F%87%B4%20Romania%2C%20Bucharest%20%7C%20%5BBL%5D
-  - VLESS | 185.236.25.12:2027 | %F0%9F%87%AA%F0%9F%87%B8%20Spain%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
-  - VLESS | 185.236.25.12:2027 | %F0%9F%87%AA%F0%9F%87%B8%20Spain%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
-  - VLESS | 200.234.227.64:8443 | %F0%9F%87%AA%F0%9F%87%B8%20Spain%2C%20Madrid%20%7C%20%5BBL%5D
-  - VLESS | 200.234.227.64:8443 | %F0%9F%87%AA%F0%9F%87%B8%20Spain%2C%20Madrid%20%7C%20%5BBL%5D
-  - VLESS | 200.234.227.64:8443 | %F0%9F%87%AA%F0%9F%87%B8%20Spain%2C%20Madrid%20%7C%20%5BBL%5D
-  - VLESS | 200.234.227.64:8443 | %F0%9F%87%AA%F0%9F%87%B8%20Spain%2C%20Madrid%20%7C%20%5BBL%5D
-  - VLESS | 200.234.227.64:8443 | %F0%9F%87%AA%F0%9F%87%B8%20Spain%2C%20Madrid%20%7C%20%5BBL%5D
-  - VLESS | 163.128.98.254:443 | %F0%9F%87%B8%F0%9F%87%AC%20Singapore%2C%20Singapore%20%28Queenstown%20Estate%29%20%7C%20%5BBL%5D
-  - VLESS | 89.116.243.185:443 | %F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
-
-## USA (10 серверов)
-  - VLESS | 45.90.216.147:8080 | %F0%9F%87%B7%F0%9F%87%BA%20Russia%2C%20Moscow%20%7C%20%5BBL%5D
-  - VLESS | ru.chick-team.ru:443 | %F0%9F%87%B7%F0%9F%87%BA%20Russia%2C%20Moscow%20%7C%20%5BBL%5D
-  - VLESS | 176.53.146.164:443 | %F0%9F%87%B7%F0%9F%87%BA%20Russia%2C%20Moscow%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
-  - VLESS | xhttpru.enotvpn.net:443 | %F0%9F%87%B7%F0%9F%87%BA%20Russia%2C%20Moscow%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
-  - SHADOWSOCKS | 156.146.38.169:443 | %F0%9F%87%BA%F0%9F%87%B8US-156.146.38.169-0142
-  - SHADOWSOCKS | 156.146.38.170:443 | %F0%9F%87%BA%F0%9F%87%B8US-156.146.38.170-0274
-  - SHADOWSOCKS | 156.146.38.168:443 | %F0%9F%87%BA%F0%9F%87%B8US-156.146.38.168-0227
-  - SHADOWSOCKS | 156.146.38.167:443 | %F0%9F%87%BA%F0%9F%87%B8US-156.146.38.167-0202
-  - SHADOWSOCKS | 37.19.198.243:443 | %F0%9F%87%BA%F0%9F%87%B8US-37.19.198.243-0139
-  - SHADOWSOCKS | 37.19.198.236:443 | %F0%9F%87%BA%F0%9F%87%B8US-37.19.198.236-0138
-
-## LITHUANIA (2 серверов)
-  - VMESS | 85.206.165.36:443 | 🇱🇹LT-85.206.165.36-0471
-  - VMESS | 85.206.168.71:30000 | 🇱🇹LT-85.206.168.71-1207
-
-## ESTONIA (3 серверов)
-  - TROJAN | 109.206.241.10:449 | %F0%9F%87%AA%F0%9F%87%AAEE-109.206.241.10-0135
-  - VMESS | 104.21.82.183:8880 | github.com/freefq - 美国CloudFlare公司CDN节点 9
-  - VMESS | gov.uk:443 | github.com/freefq - 美国Fastly全球Anycast节点 13
-
-## FRANCE (10 серверов)
-  - VLESS | 151.101.111.49:443 | %F0%9F%87%AB%F0%9F%87%B7%20France%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
-  - VLESS | 172.239.26.184:17780 | %F0%9F%87%AB%F0%9F%87%B7%20France%2C%20Paris%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
-  - TROJAN | lucky-marmot.rooster465.autos:443 | %F0%9F%87%AB%F0%9F%87%B7FR-13.38.35.46-0130
-  - TROJAN | correct-pony.rooster465.autos:443 | %F0%9F%87%AB%F0%9F%87%B7FR-13.37.222.178-0123
-  - TROJAN | great-krill.rooster465.autos:443 | %F0%9F%87%AB%F0%9F%87%B7FR-51.44.160.58-0113
-  - SHADOWSOCKS | 15.237.177.224:443 | %F0%9F%87%AB%F0%9F%87%B7FR-15.237.177.224-5324
-  - TROJAN | distinct-quail.rooster465.autos:443 | %F0%9F%87%AB%F0%9F%87%B7FR-51.44.161.22-0233
-  - TROJAN | fancy-skink.rooster465.autos:443 | %F0%9F%87%AB%F0%9F%87%B7FR-15.237.137.197-0271
-  - VMESS | planb.mojcn.com.linuxlh.xin:16632 | 🇫🇷FR-162.19.192.89-0277
-  - VMESS | 51.77.20.140:443 | 🇫🇷FR-51.77.20.140-1057
-
-## INDIA (4 серверов)
-  - VMESS | 152.67.8.205:80 | 🇮🇳IN-152.67.8.205-5419
-  - TROJAN | 152.67.160.174:443 | %F0%9F%87%AE%F0%9F%87%B3IN-152.67.160.174-1269
-  - VLESS | 192.227.169.125:443 | %E7%BE%8E%E5%9B%BD+%E7%BA%BD%E7%BA%A6%E5%B7%9E%E4%BC%8A%E5%88%A9%E5%8E%BF%E5%A8%81%E5%BB%89%E6%96%AF%E7%BB%B4%E5%B0%94%E6%9D%91ColoCrossing%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8
-  - TROJAN | pretty-mollusk.rooster465.autos:443 | %F0%9F%87%AE%F0%9F%87%B3%20IN%E5%8D%B0%E5%BA%A6%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
-
-## CANADA (10 серверов)
-  - VLESS | ru.golu-gulu.online:3443 | %F0%9F%8C%90%20Anycast-IP%20%7C%20%F0%9F%87%A9%F0%9F%87%AA%20%7C%20%5BBL%5D
-  - VLESS | de.noode.work:443 | %F0%9F%8C%90%20Anycast-IP%20%7C%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%B3%F0%9F%87%B1%20%7C%20%5BBL%5D
-  - VLESS | 186.246.13.160:443 | %F0%9F%8C%90%20Anycast-IP%20%7C%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%B0%F0%9F%87%B7%20%7C%20%5BBL%5D
-  - VLESS | 186.246.13.160:443 | %F0%9F%8C%90%20Anycast-IP%20%7C%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%B0%F0%9F%87%B7%20%7C%20%5BBL%5D
-  - VLESS | 200.165.234.238:8443 | %F0%9F%8C%90%20Anycast-IP%20%7C%20%F0%9F%87%B1%F0%9F%87%BB%20%7C%20%5BBL%5D
-  - VLESS | ru.golu-gulu.online:8443 | %F0%9F%8C%90%20Anycast-IP%20%7C%20%F0%9F%87%B1%F0%9F%87%BB%20%7C%20%5BBL%5D
-  - VLESS | 200.165.234.238:443 | %F0%9F%8C%90%20Anycast-IP%20%7C%20%F0%9F%87%B7%F0%9F%87%BA%20%F0%9F%87%B8%F0%9F%87%A8%20%7C%20%5BBL%5D
-  - VLESS | 200.165.234.238:443 | %F0%9F%8C%90%20Anycast-IP%20%7C%20%F0%9F%87%B7%F0%9F%87%BA%20%F0%9F%87%B8%F0%9F%87%A8%20%7C%20%5BBL%5D
-  - SHADOWSOCKS | 137.184.174.93:8080 | %F0%9F%87%A8%F0%9F%87%A6CA-137.184.174.93-0114
-  - VLESS | ru.golu-gulu.online:443 | %F0%9F%8C%90%20Anycast-IP%20%7C%20%F0%9F%87%B7%F0%9F%87%BA%20%F0%9F%87%B8%F0%9F%87%A8%20%7C%20%5BBL%5D
-
-## RUSSIA (5 серверов)
-  - SHADOWSOCKS | 45.8.158.176:10801 | %F0%9F%87%B7%F0%9F%87%BARU-45.8.158.176-1237
-  - SHADOWSOCKS | 31.172.67.43:443 | %F0%9F%87%B7%F0%9F%87%BARU-31.172.67.43-7606
-  - VMESS | 171.22.134.12:443 | 🇷🇺RU-171.22.134.12-7941
-  - VMESS | 171.22.134.12:443 | 🇷🇺RU-171.22.134.12-7940
-  - TROJAN | 104.18.152.219:443 | %F0%9F%87%B7%F0%9F%87%BA%20RU%E4%BF%84%E7%BD%97%E6%96%AF%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
-
+vless://b9288ac7-5c89-46d4-a0f2-a0493fb9191f@45.128.235.158:8443?type=tcp&security=reality&sni=www.deepl.com&pbk=-s8GxsHhwPjH0En_HZzKf6G50-pyFPPcRAmh-CRRvl0&sid=3e812bad3bebf80e&fp=firefox&spx=%2F&encryption=none&flow=xtls-rprx-vision#%F0%9F%87%AB%F0%9F%87%AE%20Finland%2C%20Helsinki%20%7C%20%5BBL%5D
+vless://b9288ac7-5c89-46d4-a0f2-a0493fb9191f@45.128.235.158:8443?type=tcp&security=reality&sni=www.deepl.com&pbk=-s8GxsHhwPjH0En_HZzKf6G50-pyFPPcRAmh-CRRvl0&sid=3e812bad3bebf80e&fp=qq&spx=%2F&encryption=none&flow=xtls-rprx-vision#%F0%9F%87%AB%F0%9F%87%AE%20Finland%2C%20Helsinki%20%7C%20%5BBL%5D
+vless://d96e05a1-18bb-45da-9e9f-ab7caab6952a@217.60.35.41:443?type=xhttp&security=reality&fp=edge&pbk=kB6YhYZbonyvtLdx3jwkzyNH9JrYhvCsdj8gcVVDHU4&sid=1bf9037908116e5e&sni=twitch.tv&path=/d3ef3edc63bc1b0957d8a550&mode=packet-up&extra={"xmux":{"cMaxReuseTimes":0.0,"maxConnections":1.0,"hKeepAlivePeriod":30.0,"hMaxRequestTimes":"600-900","hMaxReusableSecs":"1800-3000"},"headers":{},"noGRPCHeader":false,"xPaddingBytes":"100-1000","scMaxEachPostBytes":1000000.0,"scMinPostsIntervalMs":30.0,"scStreamUpServerSecs":"20-80"}#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%2C%20Amsterdam%20%7C%20%5BBL%5D
+vless://cac8763e-7027-4935-b8a7-49d338a6a7d4@167.104.217.47:443?alpn=h2,http/1.1&encryption=none&fp=firefox&host=nl6.gracefultun.xyz&path=/assets/build/_app/immutable/chunks/stream-one/&security=tls&sni=nl6.gracefultun.xyz&type=xhttp#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%2C%20Eygelshoven%20%7C%20%5BBL%5D
+vless://5ca83936-136d-4314-8453-4ba10a86cf60@144.31.82.201.fwqfw783rg2dad.website:443?security=tls&sni=144.31.82.201.fwqfw783rg2dad.website&type=ws&path=%2Fwebsocket&host=144.31.82.201.fwqfw783rg2dad.website#%F0%9F%87%AB%F0%9F%87%AE%20Finland%2C%20Helsinki%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
+vless://2c0a296d-3b2a-4529-9ba6-8484aecbc14b@nl2.noode.work:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=qq&pbk=qTfZpilVyQrFDIgxmEsd18Ph3c_-8O-R_af4o_WQ_Tg&sid=f74c6a18133e2e72&sni=tr187.self-cloud.work#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%2C%20Amsterdam%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.235:8080#%F0%9F%87%B3%F0%9F%87%B1NL-193.29.139.235-0120
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@193.29.139.151:8080#%F0%9F%87%B3%F0%9F%87%B1NL-193.29.139.151-0127
+ss://YWVzLTEyOC1jZmI6c2hhZG93c29ja3M=@109.201.152.181:443#%F0%9F%87%B3%F0%9F%87%B1NL-109.201.152.181-0137
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@193.29.139.147:8080#%F0%9F%87%B3%F0%9F%87%B1NL-193.29.139.147-0093
+vless://97883b3a-f0b5-4e88-a61b-e9b24e18423d@45.154.98.72:1000?encryption=none&flow=xtls-rprx-vision&security=reality&sni=sony.com&fp=chrome&pbk=NLmekXQAhK-GC7wZhk2RcDHFI41iq6ojzZea1ppEazM&sid=06cc092d6f372b5e&spx=/&type=tcp&headerType=none#%F0%9F%87%A9%F0%9F%87%AA%20Germany%2C%20D%C3%BCsseldorf%20%28Stadtbezirk%20IX%29%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
+vless://97883b3a-f0b5-4e88-a61b-e9b24e18423d@45.154.98.72:1000?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.speedtest.net&fp=chrome&pbk=NLmekXQAhK-GC7wZhk2RcDHFI41iq6ojzZea1ppEazM&sid=06cc092d6f372b5e&spx=/&type=tcp&headerType=none#%F0%9F%87%A9%F0%9F%87%AA%20Germany%2C%20D%C3%BCsseldorf%20%28Stadtbezirk%20IX%29%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
+vless://16ab4d4a-fd81-4535-9b7b-346677226ce8@177.3.212.155:8443?encryption=none&flow=xtls-rprx-vision&pbk=2IpfY9pdiwIuGV1MfExOkr8YgTrIx9mmn85K4_7dMXs&security=reality&sid=ddd281ae46&sni=olp.crsmaps.com&type=tcp&fp=safari#%F0%9F%87%A7%F0%9F%87%B7%20Brazil%2C%20Aparecida%20de%20Goi%C3%A2nia%20%7C%20%5BBL%5D
+vless://16ab4d4a-fd81-4535-9b7b-346677226ce8@177.3.212.155:8443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=2IpfY9pdiwIuGV1MfExOkr8YgTrIx9mmn85K4_7dMXs&sid=ddd281ae46&sni=olp.crsmaps.com#%F0%9F%87%A7%F0%9F%87%B7%20Brazil%2C%20Aparecida%20de%20Goi%C3%A2nia%20%7C%20%5BBL%5D
+vless://16ab4d4a-fd81-4535-9b7b-346677226ce8@177.3.212.155:8443?encryption=none&flow=xtls-rprx-vision&pbk=2IpfY9pdiwIuGV1MfExOkr8YgTrIx9mmn85K4_7dMXs&security=reality&sid=ddd281ae46&sni=olp.crsmaps.com&type=tcp&fp=ios#%F0%9F%87%A7%F0%9F%87%B7%20Brazil%2C%20Aparecida%20de%20Goi%C3%A2nia%20%7C%20%5BBL%5D
+vless://16ab4d4a-fd81-4535-9b7b-346677226ce8@177.3.212.155:8443?encryption=none&flow=xtls-rprx-vision&pbk=2IpfY9pdiwIuGV1MfExOkr8YgTrIx9mmn85K4_7dMXs&security=reality&sid=ddd281ae46&sni=olp.crsmaps.com&type=tcp&fp=chrome#%F0%9F%87%A7%F0%9F%87%B7%20Brazil%2C%20Aparecida%20de%20Goi%C3%A2nia%20%7C%20%5BBL%5D
+vless://2569614f-879b-43de-9cd9-9bb304b68856@144.31.179.21:8443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=QHkXBS2ENHV0khgY9VBYi8_9bpfqnUYDcfQN4cW5Qg0&sid=4326&sni=get4s.skystreamgame.com#%F0%9F%87%B8%F0%9F%87%AA%20Sweden%2C%20Stockholm%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
+vless://16ab4d4a-fd81-4535-9b7b-346677226ce8@177.3.212.155:8443?encryption=none&flow=xtls-rprx-vision&pbk=2IpfY9pdiwIuGV1MfExOkr8YgTrIx9mmn85K4_7dMXs&security=reality&sid=ddd281ae46&sni=olp.crsmaps.com&type=tcp&fp=qq#%F0%9F%87%A7%F0%9F%87%B7%20Brazil%2C%20Aparecida%20de%20Goi%C3%A2nia%20%7C%20%5BBL%5D
+vless://2c0a296d-3b2a-4529-9ba6-8484aecbc14b@comfort.noode.work:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=qq&pbk=qTfZpilVyQrFDIgxmEsd18Ph3c_-8O-R_af4o_WQ_Tg&sid=f74c6a18133e2e72&sni=comfort.self-cloud.work#%F0%9F%87%B8%F0%9F%87%AA%20Sweden%2C%20Stockholm%20%28S%C3%B6dermalm%29%20%7C%20%5BBL%5D
+vless://2569614f-879b-43de-9cd9-9bb304b68856@get4s.skystreamgame.com:8443?type=tcp&headerType=none&security=reality&encryption=none&sni=get4s.skystreamgame.com&fp=firefox&pbk=QHkXBS2ENHV0khgY9VBYi8_9bpfqnUYDcfQN4cW5Qg0&sid=4326&flow=xtls-rprx-vision#%F0%9F%87%B8%F0%9F%87%AA%20Sweden%2C%20Stockholm%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.210:8080#%F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.210-0125
+vless://b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb@api.getsavesafe.space:443?mode=auto&security=reality&encryption=none&pbk=fkYk0Ow--0GYExpBFb2wZjooymT7uASOQLw9ESC3DF8&fp=chrome&type=xhttp&sni=api.getsavesafe.space&sid=62b6d6e64d461d78#%F0%9F%87%AC%F0%9F%87%A7%20United%20Kingdom%2C%20London%20%7C%20%5BBL%5D
+vless://b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb@api.getsavesafe.space:443?mode=auto&security=reality&encryption=none&pbk=fkYk0Ow--0GYExpBFb2wZjooymT7uASOQLw9ESC3DF8&fp=firefox&type=xhttp&sni=api.getsavesafe.space&sid=62b6d6e64d461d78#%F0%9F%87%AC%F0%9F%87%A7%20United%20Kingdom%2C%20London%20%7C%20%5BBL%5D
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@82.38.31.34:8080#%F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.34-0095
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.179:8080#%F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.179-0124
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@82.38.31.49:8080#%F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.49-0105
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.187:8080#%F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.187-0097
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@82.38.31.35:443#%F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.35-0115
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.189:8080#%F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.189-0098
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.180:8080#%F0%9F%87%AC%F0%9F%87%A7GB-82.38.31.180-0883
+vless://fe0138b5-ca60-4a67-91aa-b5a49266eeb5@45.144.51.161:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=tPkLNwERe23qHETdRm0NN6TSF-bwvUeWKnmXR8CK3nc&security=reality&sid=58d746158028c90d&sni=pl.chick-team.ru&type=tcp#%F0%9F%87%B5%F0%9F%87%B1%20Poland%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
+vless://fe0138b5-ca60-4a67-91aa-b5a49266eeb5@82.22.40.33:443?encryption=none&flow=xtls-rprx-vision&fp=edge&pbk=tPkLNwERe23qHETdRm0NN6TSF-bwvUeWKnmXR8CK3nc&security=reality&sid=58d746158028c90d&sni=pl.chick-team.ru&type=tcp#%F0%9F%87%B5%F0%9F%87%B1%20Poland%2C%20Warsaw%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
+vless://fe0138b5-ca60-4a67-91aa-b5a49266eeb5@82.22.40.48:443?encryption=none&flow=xtls-rprx-vision&fp=qq&pbk=tPkLNwERe23qHETdRm0NN6TSF-bwvUeWKnmXR8CK3nc&security=reality&sid=58d746158028c90d&sni=pl.chick-team.ru&type=tcp#%F0%9F%87%B5%F0%9F%87%B1%20Poland%2C%20Warsaw%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
+vless://fe0138b5-ca60-4a67-91aa-b5a49266eeb5@45.144.51.161:443?encryption=none&flow=xtls-rprx-vision&fp=qq&pbk=tPkLNwERe23qHETdRm0NN6TSF-bwvUeWKnmXR8CK3nc&security=reality&sid=58d746158028c90d&sni=pl.chick-team.ru&type=tcp#%F0%9F%87%B5%F0%9F%87%B1%20Poland%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
+vless://fe0138b5-ca60-4a67-91aa-b5a49266eeb5@45.144.49.200:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=tPkLNwERe23qHETdRm0NN6TSF-bwvUeWKnmXR8CK3nc&security=reality&sid=58d746158028c90d&sni=pl.chick-team.ru&type=tcp#%F0%9F%87%B5%F0%9F%87%B1%20Poland%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
+vless://fe0138b5-ca60-4a67-91aa-b5a49266eeb5@82.22.40.33:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=tPkLNwERe23qHETdRm0NN6TSF-bwvUeWKnmXR8CK3nc&security=reality&sid=58d746158028c90d&sni=pl.chick-team.ru&type=tcp#%F0%9F%87%B5%F0%9F%87%B1%20Poland%2C%20Warsaw%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
+vless://fe0138b5-ca60-4a67-91aa-b5a49266eeb5@82.22.41.169:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=tPkLNwERe23qHETdRm0NN6TSF-bwvUeWKnmXR8CK3nc&security=reality&sid=58d746158028c90d&sni=pl.chick-team.ru&type=tcp#%F0%9F%87%B5%F0%9F%87%B1%20Poland%2C%20Warsaw%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
+vless://fe0138b5-ca60-4a67-91aa-b5a49266eeb5@82.22.41.204:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=tPkLNwERe23qHETdRm0NN6TSF-bwvUeWKnmXR8CK3nc&security=reality&sid=58d746158028c90d&sni=pl.chick-team.ru&type=tcp#%F0%9F%87%B5%F0%9F%87%B1%20Poland%2C%20Warsaw%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
+vless://fe0138b5-ca60-4a67-91aa-b5a49266eeb5@45.144.49.231:443?encryption=none&flow=xtls-rprx-vision&fp=qq&pbk=tPkLNwERe23qHETdRm0NN6TSF-bwvUeWKnmXR8CK3nc&security=reality&sid=58d746158028c90d&sni=pl.chick-team.ru&type=tcp#%F0%9F%87%B5%F0%9F%87%B1%20Poland%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
+vless://fe0138b5-ca60-4a67-91aa-b5a49266eeb5@45.144.49.231:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=tPkLNwERe23qHETdRm0NN6TSF-bwvUeWKnmXR8CK3nc&security=reality&sid=58d746158028c90d&sni=pl.chick-team.ru&type=tcp#%F0%9F%87%B5%F0%9F%87%B1%20Poland%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
+vmess://ewogICAgImFkZCI6ICI5NS4yMTYuMTg2LjE5MSIsCiAgICAiYWlkIjogMCwKICAgICJob3N0IjogImdvb2dsZS5jb20iLAogICAgImlkIjogIjJhYWM3N2RlLWIzZTQtNDAxNy04NDVjLWNhMTM4MGYyZThkMCIsCiAgICAibmV0IjogIndzIiwKICAgICJwYXRoIjogIi90ZWxlZ3JhbS1pZC0iLAogICAgInBvcnQiOiA4MCwKICAgICJwcyI6ICLwn4er8J+HrkZJLTk1LjIxNi4xODYuMTkxLTExNDkiLAogICAgInRscyI6ICIiLAogICAgInR5cGUiOiAiYXV0byIsCiAgICAic2VjdXJpdHkiOiAiYXV0byIsCiAgICAic2tpcC1jZXJ0LXZlcmlmeSI6IHRydWUsCiAgICAic25pIjogIiIKfQ==
+vmess://ewogICAgImFkZCI6ICI5MS4xMzIuMTk3LjUiLAogICAgImFpZCI6IDY0LAogICAgImhvc3QiOiAid3d3LjI5Nzk0MTkyLnh5eiIsCiAgICAiaWQiOiAiNDE4MDQ4YWYtYTI5My00Yjk5LTliMGMtOThjYTM1ODBkZDI0IiwKICAgICJuZXQiOiAid3MiLAogICAgInBhdGgiOiAiL3BhdGgvMTkxMDE5MDcyOTI3IiwKICAgICJwb3J0IjogNDQzLAogICAgInBzIjogIvCfh6vwn4euRkktOTEuMTMyLjE5Ny41LTEyMTgiLAogICAgInRscyI6ICJ0bHMiLAogICAgInR5cGUiOiAiYXV0byIsCiAgICAic2VjdXJpdHkiOiAiYXV0byIsCiAgICAic2tpcC1jZXJ0LXZlcmlmeSI6IHRydWUsCiAgICAic25pIjogIiIKfQ==
+vmess://ewogICAgImFkZCI6ICI2NS4yMS4yNDAuMTA4IiwKICAgICJhaWQiOiAwLAogICAgImhvc3QiOiAiIiwKICAgICJpZCI6ICI2YjdjYmM0MS1mYjgwLTQxYTgtOGViNi1iNWJkYjBlODYxNDciLAogICAgIm5ldCI6ICJodHRwIiwKICAgICJwYXRoIjogIiIsCiAgICAicG9ydCI6IDQ0MywKICAgICJwcyI6ICLwn4er8J+HrkZJLTY1LjIxLjI0MC4xMDgtMzk0MiIsCiAgICAidGxzIjogIiIsCiAgICAidHlwZSI6ICJhdXRvIiwKICAgICJzZWN1cml0eSI6ICJhdXRvIiwKICAgICJza2lwLWNlcnQtdmVyaWZ5IjogdHJ1ZSwKICAgICJzbmkiOiAiIgp9
+vmess://ewogICAgImFkZCI6ICI2NS4xMDkuMTM0LjE5MSIsCiAgICAiYWlkIjogMCwKICAgICJob3N0IjogIiIsCiAgICAiaWQiOiAiOTE2OTg3NDctOTJiMy00YTA3LWI1ZGEtMjI2OTRlZGJlYTgyIiwKICAgICJuZXQiOiAid3MiLAogICAgInBhdGgiOiAiL2dyYXBocWwiLAogICAgInBvcnQiOiA4MCwKICAgICJwcyI6ICLwn4er8J+HrkZJLTY1LjEwOS4xMzQuMTkxLTQ2NzMiLAogICAgInRscyI6ICIiLAogICAgInR5cGUiOiAiYXV0byIsCiAgICAic2VjdXJpdHkiOiAiYXV0byIsCiAgICAic2tpcC1jZXJ0LXZlcmlmeSI6IHRydWUsCiAgICAic25pIjogIiIKfQ==
+vmess://ewogICJ2IjogMiwKICAicHMiOiAi8J+Hq/Cfh65GSeiKrOWFsCIsCiAgImFkZCI6ICIxODUuMjQ2LjE1Mi4xNTkiLAogICJwb3J0IjogNDQzLAogICJpZCI6ICI1ZjcyZjE4MC1iMjFiLTRiN2EtODQ4NC0yNDA3NTkwMTI2MDQiLAogICJhaWQiOiAwLAogICJzY3kiOiAiYXV0byIsCiAgIm5ldCI6ICJ3cyIsCiAgInR5cGUiOiBudWxsLAogICJob3N0IjogImFwamhkZ2d5eC5jb20iLAogICJwYXRoIjogIi81ZjcyZjE4MC1iMjFiLTRiN2EtODQ4NC0yNDA3NTkwOTY3ODUiLAogICJ0bHMiOiB0cnVlLAogICJzbmkiOiAiIgp9
+vless://b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb@89.116.243.185:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=zDeF_twyyT7a7zKiURF-Q8f6kkj95rx7zQ_jar09Hi4&security=reality&sid=e4f6a3446ac34a23&sni=us.savesafe.cc&type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
+vless://b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb@89.116.243.205:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=zDeF_twyyT7a7zKiURF-Q8f6kkj95rx7zQ_jar09Hi4&security=reality&sid=e4f6a3446ac34a23&sni=us.savesafe.cc&type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%2C%20North%20Bergen%20%7C%20%5BBL%5D
+vless://b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb@140.99.223.129:443?encryption=none&fp=firefox&pbk=q-8lriuP627DilumgJAvbowp7YGzWBZg9gSDgbmowjk&security=reality&sid=9f3df965329a8e7f&sni=usa.savesafe.cc&type=xhttp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%2C%20West%20Miami%20%7C%20%5BBL%5D
+vless://b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb@140.99.223.129:443?encryption=none&fp=qq&pbk=q-8lriuP627DilumgJAvbowp7YGzWBZg9gSDgbmowjk&security=reality&sid=9f3df965329a8e7f&sni=usa.savesafe.cc&type=xhttp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%2C%20West%20Miami%20%7C%20%5BBL%5D
+vless://b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb@usa.opngtr.nl:443?pbk=q-8lriuP627DilumgJAvbowp7YGzWBZg9gSDgbmowjk&security=reality&sid=9f3df965329a8e7f&sni=usa.savesafe.cc&type=xhttp&fp=ios#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%2C%20West%20Miami%20%7C%20%5BBL%5D
+vless://b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb@usa.opngtr.nl:443?pbk=q-8lriuP627DilumgJAvbowp7YGzWBZg9gSDgbmowjk&security=reality&sid=9f3df965329a8e7f&sni=usa.savesafe.cc&type=xhttp&fp=edge#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%2C%20West%20Miami%20%7C%20%5BBL%5D
+vless://579f0893-e6f9-4036-86a1-7c10aa2d24ea@185.236.25.12:2027?encryption=none&extra={"enablePadding":true,"maxConcurrency":100}&fp=firefox&mode=auto&path=/patch&pbk=EApxy12MeXpqt-78odxizwcXT6hX9f8XeAcbMDVRAV0&security=reality&sid=6ba7b8109dad11d1&sni=spani.skysafe.online&type=xhttp#%F0%9F%87%AA%F0%9F%87%B8%20Spain%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
+vless://579f0893-e6f9-4036-86a1-7c10aa2d24ea@185.236.25.12:2027?encryption=none&extra=%7B%22enablePadding%22%3Atrue%2C%22maxConcurrency%22%3A100%7D&fp=edge&mode=auto&path=%2Fpatch&pbk=EApxy12MeXpqt-78odxizwcXT6hX9f8XeAcbMDVRAV0&security=reality&sid=6ba7b8109dad11d1&sni=spani.skysafe.online&type=xhttp#%F0%9F%87%AA%F0%9F%87%B8%20Spain%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
+vless://16ab4d4a-fd81-4535-9b7b-346677226ce8@200.234.227.64:8443?encryption=none&flow=xtls-rprx-vision&fp=edge&pbk=OFK3xqhyTsDoJi8emuzmOCE9Xzwi0DyZPNj0X-E4iVE&security=reality&sid=5326cc7587a9f0&sni=sp.crsmaps.com&type=tcp#%F0%9F%87%AA%F0%9F%87%B8%20Spain%2C%20Madrid%20%7C%20%5BBL%5D
+vless://16ab4d4a-fd81-4535-9b7b-346677226ce8@200.234.227.64:8443?encryption=none&flow=xtls-rprx-vision&pbk=OFK3xqhyTsDoJi8emuzmOCE9Xzwi0DyZPNj0X-E4iVE&security=reality&sid=5326cc7587a9f0&sni=sp.crsmaps.com&type=tcp&fp=firefox#%F0%9F%87%AA%F0%9F%87%B8%20Spain%2C%20Madrid%20%7C%20%5BBL%5D
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@37.19.198.243:443#%F0%9F%87%BA%F0%9F%87%B8US-37.19.198.243-0139
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@37.19.198.160:443#%F0%9F%87%BA%F0%9F%87%B8US-37.19.198.160-0136
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@37.19.198.236:443#%F0%9F%87%BA%F0%9F%87%B8US-37.19.198.236-0138
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@156.146.38.169:443#%F0%9F%87%BA%F0%9F%87%B8US-156.146.38.169-0142
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@156.146.38.170:443#%F0%9F%87%BA%F0%9F%87%B8US-156.146.38.170-0274
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@156.146.38.167:443#%F0%9F%87%BA%F0%9F%87%B8US-156.146.38.167-0202
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@156.146.38.168:443#%F0%9F%87%BA%F0%9F%87%B8US-156.146.38.168-0227
+ss://YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU=@18.188.213.207:443#%F0%9F%87%BA%F0%9F%87%B8US-18.188.213.207-1729
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@37.19.198.244:443#%F0%9F%87%BA%F0%9F%87%B8US-37.19.198.244-0132
+ss://YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU=@18.189.171.163:443#%F0%9F%87%BA%F0%9F%87%B8US-18.189.171.163-5373
+vmess://ewogICAgImFkZCI6ICI4NS4yMDYuMTY1LjM2IiwKICAgICJhaWQiOiA2NCwKICAgICJob3N0IjogIiIsCiAgICAiaWQiOiAiYmE0OWFiMDUtNzhmOC00YjBiLTk0MDAtMTgyNmNjMmQzZjc1IiwKICAgICJuZXQiOiAid3MiLAogICAgInBhdGgiOiAiLyIsCiAgICAicG9ydCI6IDQ0MywKICAgICJwcyI6ICLwn4ex8J+HuUxULTg1LjIwNi4xNjUuMzYtMDQ3MSIsCiAgICAidGxzIjogInRscyIsCiAgICAidHlwZSI6ICJhdXRvIiwKICAgICJzZWN1cml0eSI6ICJhdXRvIiwKICAgICJza2lwLWNlcnQtdmVyaWZ5IjogdHJ1ZSwKICAgICJzbmkiOiAiIgp9
+vmess://ewogICAgImFkZCI6ICI4NS4yMDYuMTY4LjcxIiwKICAgICJhaWQiOiA2NCwKICAgICJob3N0IjogInd3dy45MzI3MTYyNi54eXoiLAogICAgImlkIjogIjQxODA0OGFmLWEyOTMtNGI5OS05YjBjLTk4Y2EzNTgwZGQyNCIsCiAgICAibmV0IjogIndzIiwKICAgICJwYXRoIjogIi9wYXRoLzE5MTAxOTA3MjkyNyIsCiAgICAicG9ydCI6IDMwMDAwLAogICAgInBzIjogIvCfh7Hwn4e5TFQtODUuMjA2LjE2OC43MS0xMjA3IiwKICAgICJ0bHMiOiAidGxzIiwKICAgICJ0eXBlIjogImF1dG8iLAogICAgInNlY3VyaXR5IjogImF1dG8iLAogICAgInNraXAtY2VydC12ZXJpZnkiOiB0cnVlLAogICAgInNuaSI6ICIiCn0=
+trojan://oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1@109.206.241.10:449?security=tls&sni=russiapower.accesscam.org#%F0%9F%87%AA%F0%9F%87%AAEE-109.206.241.10-0135
+vmess://eyJhZGQiOiAiMTA0LjIxLjgyLjE4MyIsICJhaWQiOiAwLCAiaG9zdCI6ICJzZXJ2ZXIyNi5iZWhlc2h0YmFuZWguY29tIiwgImlkIjogIjVhNzAyMWUwLTI2YjQtNDVkNi1iMTc1LWZlNTUxNjAxY2E5NyIsICJuZXQiOiAid3MiLCAicGF0aCI6ICIvIiwgInBvcnQiOiA4ODgwLCAicHMiOiAiZ2l0aHViLmNvbS9mcmVlZnEgLSBcdTdmOGVcdTU2ZmRDbG91ZEZsYXJlXHU1MTZjXHU1M2Y4Q0ROXHU4MjgyXHU3MGI5IDkiLCAidGxzIjogIiIsICJ0eXBlIjogImF1dG8iLCAic2VjdXJpdHkiOiAiYXV0byIsICJza2lwLWNlcnQtdmVyaWZ5IjogdHJ1ZSwgInNuaSI6ICIifQ==
+vmess://eyJhZGQiOiAiZ292LnVrIiwgInYiOiAiMiIsICJwcyI6ICJnaXRodWIuY29tL2ZyZWVmcSAtIFx1N2Y4ZVx1NTZmZEZhc3RseVx1NTE2OFx1NzQwM0FueWNhc3RcdTgyODJcdTcwYjkgMTMiLCAicG9ydCI6IDQ0MywgImlkIjogIjc3ODQ4ODI0LTkzYjctNGI4OS1mZmQwLWU5MWFmZmY0MDZjZSIsICJhaWQiOiAiMCIsICJuZXQiOiAid3MiLCAidHlwZSI6ICIiLCAiaG9zdCI6ICJ6aGVzaGlzY3AuY29tIiwgInBhdGgiOiAiLzc3ODQ4ODI0IiwgInRscyI6ICJ0bHMifQ==
+vless://638623de-436a-48ae-9ecd-71ec42a168a1@151.101.111.49:443?security=tls&type=xhttp&headerType=&path=%2F&host=ovd10.global.ssl.fastly.net&mode=packet-up&sni=accounts.fastly.com&fp=chrome&alpn=h3#%F0%9F%87%AB%F0%9F%87%B7%20France%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
+vless://a06119a7-4f1a-4592-86d9-e050a332b2b3@172.239.26.184:17780?type=tcp&security=reality&encryption=none&fp=firefox&pbk=CHNEnURyZzZ1OQwb5SD2Ze8K9eIY2oggyrV5FOIsU28&sid=a0fbc54d937aaccb&sni=amp-api-edge.apps.apple.com#%F0%9F%87%AB%F0%9F%87%B7%20France%2C%20Paris%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
+trojan://PQ05174892@lucky-marmot.rooster465.autos:443?security=tls&sni=lucky-marmot.rooster465.autos#%F0%9F%87%AB%F0%9F%87%B7FR-13.38.35.46-0130
+trojan://FH72359861@correct-pony.rooster465.autos:443?security=tls&sni=correct-pony.rooster465.autos#%F0%9F%87%AB%F0%9F%87%B7FR-13.37.222.178-0123
+trojan://QV31589740@great-krill.rooster465.autos:443?security=tls&sni=great-krill.rooster465.autos#%F0%9F%87%AB%F0%9F%87%B7FR-51.44.160.58-0113
+trojan://AE62539071@distinct-quail.rooster465.autos:443?security=tls#%F0%9F%87%AB%F0%9F%87%B7FR-51.44.161.22-0233
+ss://YWVzLTI1Ni1jZmI6YW1hem9uc2tyMDU=@15.237.177.224:443#%F0%9F%87%AB%F0%9F%87%B7FR-15.237.177.224-5324
+trojan://ND91608427@fancy-skink.rooster465.autos:443?security=tls&sni=fancy-skink.rooster465.autos#%F0%9F%87%AB%F0%9F%87%B7FR-15.237.137.197-0271
+vmess://ewogICAgImFkZCI6ICJwbGFuYi5tb2pjbi5jb20ubGludXhsaC54aW4iLAogICAgImFpZCI6IDAsCiAgICAiaG9zdCI6ICJmNzg0ZmRiNzVlNGZjOGE0NzhjMTBkOWFjZmY1MTNkMy5tb2Jnc2xiLnRiY2FjaGUuY29tIiwKICAgICJpZCI6ICIwYzY1NzkxMy1lNTkzLTQ4OTMtOTU1NS1mODg0NzhjMzNhNGIiLAogICAgIm5ldCI6ICJ3cyIsCiAgICAicGF0aCI6ICIvIiwKICAgICJwb3J0IjogMTY2MzIsCiAgICAicHMiOiAi8J+Hq/Cfh7dGUi0xNjIuMTkuMTkyLjg5LTAyNzciLAogICAgInRscyI6ICIiLAogICAgInR5cGUiOiAiYXV0byIsCiAgICAic2VjdXJpdHkiOiAiYXV0byIsCiAgICAic2tpcC1jZXJ0LXZlcmlmeSI6IHRydWUsCiAgICAic25pIjogIiIKfQ==
+vmess://ewogICAgImFkZCI6ICIxODUuMTYuMTEwLjIxMiIsCiAgICAiYWlkIjogMCwKICAgICJob3N0IjogIlRHLldhbmdDYWkyLnM0LmRiLWxpbmswMi50b3AiLAogICAgImlkIjogImIyMDlkZmJmLTZiYjAtMzBiMi1hNzdhLTI4NmUyMzA0NjZiNSIsCiAgICAibmV0IjogIndzIiwKICAgICJwYXRoIjogIi9kYWJhaSIsCiAgICAicG9ydCI6IDg4ODAsCiAgICAicHMiOiAi8J+Hq/Cfh7dGUi0xODUuMTYuMTEwLjIxMi0xMTEzIiwKICAgICJ0bHMiOiAiIiwKICAgICJ0eXBlIjogImF1dG8iLAogICAgInNlY3VyaXR5IjogImF1dG8iLAogICAgInNraXAtY2VydC12ZXJpZnkiOiB0cnVlLAogICAgInNuaSI6ICIiCn0=
+vmess://ewogICAgImFkZCI6ICIxNTIuNjcuOC4yMDUiLAogICAgImFpZCI6IDAsCiAgICAiaG9zdCI6ICIiLAogICAgImlkIjogIjlkYjRjNzA4LWFlZjgtNDM1OS04MjFiLTM4ZTQ3OTkwYmUwZCIsCiAgICAibmV0IjogIndzIiwKICAgICJwYXRoIjogIi8iLAogICAgInBvcnQiOiA4MCwKICAgICJwcyI6ICLwn4eu8J+Hs0lOLTE1Mi42Ny44LjIwNS01NDE5IiwKICAgICJ0bHMiOiAiIiwKICAgICJ0eXBlIjogImF1dG8iLAogICAgInNlY3VyaXR5IjogImF1dG8iLAogICAgInNraXAtY2VydC12ZXJpZnkiOiBmYWxzZSwKICAgICJzbmkiOiAiMTUyLjY3LjguMjA1Igp9
+trojan://54080134-2cba-4535-8599-95650bd9aa54@152.67.160.174:443?security=tls#%F0%9F%87%AE%F0%9F%87%B3IN-152.67.160.174-1269
+vless://41f4cb15-5a3f-3934-89fe-b4177146adf4@s482.ccgfw.online:443?encryption=none&type=tcp&headerType=&fp=firefox&host=34a1d2ebs478.gogocs.xyz&path=&flow=xtls-rprx-vision&security=tls&sni=u643766u34a1d2ebs478.gogocs.xyz&serviceName=&mode=&alpn=h2%2Chttp%2F1.1#%E7%BE%8E%E5%9B%BD+%E7%BA%BD%E7%BA%A6%E5%B7%9E%E4%BC%8A%E5%88%A9%E5%8E%BF%E5%A8%81%E5%BB%89%E6%96%AF%E7%BB%B4%E5%B0%94%E6%9D%91ColoCrossing%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8
+trojan://EQ30679154@pretty-mollusk.rooster465.autos:443?allowInsecure=0&sni=pretty-mollusk.rooster465.autos#%F0%9F%87%AE%F0%9F%87%B3%20IN%E5%8D%B0%E5%BA%A6%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
+ss://cmM0LW1kNToxNGZGUHJiZXpFM0hEWnpzTU9yNg==@137.184.174.93:8080#%F0%9F%87%A8%F0%9F%87%A6CA-137.184.174.93-0114
+vless://2c0a296d-3b2a-4529-9ba6-8484aecbc14b@de.noode.work:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=qq&pbk=6vDdlh4aAipoRQ-IXDjzTUtKpZS09xtNXIisCa__2CM&sid=f74c6a18133e2e72&sni=johnydeep.net#%F0%9F%8C%90%20Anycast-IP%20%7C%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%B3%F0%9F%87%B1%20%7C%20%5BBL%5D
+vless://e7c11cc8-e4ae-45cf-98ef-6d9bc9cc5aa7@200.165.234.238:8443?authority=id.pervye.ru&encryption=none&fp=firefox&pbk=xEShpzw3ELhAha1ilVBZdkfgxtRMxZmP8Ji_Y3FZSX0&security=reality&serviceName=nss&sni=id.pervye.ru&type=grpc#%F0%9F%8C%90%20Anycast-IP%20%7C%20%F0%9F%87%B1%F0%9F%87%BB%20%7C%20%5BBL%5D
+vless://fe0138b5-ca60-4a67-91aa-b5a49266eeb5@201.24.51.10:443?encryption=none&flow=xtls-rprx-vision&fp=edge&pbk=aLdyGbloIzzeClW7_SPWL0IZpcaUWsA7rlmbNieggWk&security=reality&sid=0894e51863b5c395&sni=nl.chick-team.ru&type=tcp#%F0%9F%8C%90%20Anycast-IP%20%7C%20%F0%9F%87%B7%F0%9F%87%BA%20%F0%9F%87%B8%F0%9F%87%A8%20%7C%20%5BBL%5D
+vless://e7c11cc8-e4ae-45cf-98ef-6d9bc9cc5aa7@200.165.234.238:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=xkl9goRCVqCwoatSn_svrHkzlcmu7APwhr7XfdC6jTU&sni=ru.golu-gulu.online#%F0%9F%8C%90%20Anycast-IP%20%7C%20%F0%9F%87%B7%F0%9F%87%BA%20%F0%9F%87%B8%F0%9F%87%A8%20%7C%20%5BBL%5D
+vless://2642342c-fa52-4f62-b44d-fb77de8f75e3@186.246.13.160:443?type=grpc&security=reality&fp=qq&pbk=C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4&sid=9e2a6f4c3b7d1e8a&sni=der.moktana.app&serviceName=moktana.net.v1.StreamService#%F0%9F%8C%90%20Anycast-IP%20%7C%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%B0%F0%9F%87%B7%20%7C%20%5BBL%5D
+vless://2642342c-fa52-4f62-b44d-fb77de8f75e3@186.246.13.160:443?type=grpc&security=reality&fp=firefox&pbk=C6nh6hqFTbtizgSH8vGmw2XUxsQAbAW3jPylpgGvfl4&sid=9e2a6f4c3b7d1e8a&sni=der.moktana.app&serviceName=moktana.net.v1.StreamService#%F0%9F%8C%90%20Anycast-IP%20%7C%20%F0%9F%87%A9%F0%9F%87%AA%20%F0%9F%87%B0%F0%9F%87%B7%20%7C%20%5BBL%5D
+vless://e7c11cc8-e4ae-45cf-98ef-6d9bc9cc5aa7@200.165.234.238:443?authority=ru.golu-gulu.online&encryption=none&fp=firefox&pbk=QZz4tjRkxYsgTZBlRALOQU4O5YnAGtSGkXF8OSX11m8&security=reality&serviceName=grpcpath&sni=ru.golu-gulu.online&type=grpc#%F0%9F%8C%90%20Anycast-IP%20%7C%20%F0%9F%87%B7%F0%9F%87%BA%20%F0%9F%87%B8%F0%9F%87%A8%20%7C%20%5BBL%5D
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHNXA2d3c0bzY3SEI=@108.181.118.10:8388#%F0%9F%87%A8%F0%9F%87%A6CA-108.181.118.10-0088
+vmess://ewogICAgImFkZCI6ICIyMy4xNjIuMjAwLjIyNyIsCiAgICAiYWlkIjogMCwKICAgICJob3N0IjogIjIzLjE2Mi4yMDAuMjI3IiwKICAgICJpZCI6ICIwM2ZjYzYxOC1iOTNkLTY3OTYtNmFlZC04YTM4Yzk3NWQ1ODEiLAogICAgIm5ldCI6ICJ3cyIsCiAgICAicGF0aCI6ICIvbGlua3Z3cyIsCiAgICAicG9ydCI6IDQ0MywKICAgICJwcyI6ICLwn4eo8J+HpkNBLTIzLjE2Mi4yMDAuMjI3LTA1NjEiLAogICAgInRscyI6ICJ0bHMiLAogICAgInR5cGUiOiAiYXV0byIsCiAgICAic2VjdXJpdHkiOiAiYXV0byIsCiAgICAic2tpcC1jZXJ0LXZlcmlmeSI6IHRydWUsCiAgICAic25pIjogIiIKfQ==
+ss://YWVzLTI1Ni1nY206MWVhZGQ0ZTRhMzdiNjYwMQ==@45.8.158.176:10801#%F0%9F%87%B7%F0%9F%87%BARU-45.8.158.176-1237
+ss://YWVzLTI1Ni1jZmI6YXNkS2thc2tKS2Zuc2E=@31.172.67.43:443#%F0%9F%87%B7%F0%9F%87%BARU-31.172.67.43-7606
+vmess://ewogICAgImFkZCI6ICIxNzEuMjIuMTM0LjEyIiwKICAgICJhaWQiOiA2NCwKICAgICJob3N0IjogIiIsCiAgICAiaWQiOiAiNDE4MDQ4YWYtYTI5My00Yjk5LTliMGMtOThjYTM1ODBkZDI0IiwKICAgICJuZXQiOiAid3MiLAogICAgInBhdGgiOiAiL3BhdGgvMTY4OTkzNTI0MzAyNyIsCiAgICAicG9ydCI6IDQ0MywKICAgICJwcyI6ICLwn4e38J+HulJVLTE3MS4yMi4xMzQuMTItNzk0MSIsCiAgICAidGxzIjogInRscyIsCiAgICAidHlwZSI6ICJhdXRvIiwKICAgICJzZWN1cml0eSI6ICJhdXRvIiwKICAgICJza2lwLWNlcnQtdmVyaWZ5IjogdHJ1ZSwKICAgICJzbmkiOiAiIgp9
+vmess://ewogICAgImFkZCI6ICIxNzEuMjIuMTM0LjEyIiwKICAgICJhaWQiOiA2NCwKICAgICJob3N0IjogIiIsCiAgICAiaWQiOiAiNDE4MDQ4YWYtYTI5My00Yjk5LTliMGMtOThjYTM1ODBkZDI0IiwKICAgICJuZXQiOiAid3MiLAogICAgInBhdGgiOiAiL3BhdGgvMTY4OTg0OTQ4NzE5MCIsCiAgICAicG9ydCI6IDQ0MywKICAgICJwcyI6ICLwn4e38J+HulJVLTE3MS4yMi4xMzQuMTItNzk0MCIsCiAgICAidGxzIjogInRscyIsCiAgICAidHlwZSI6ICJhdXRvIiwKICAgICJzZWN1cml0eSI6ICJhdXRvIiwKICAgICJza2lwLWNlcnQtdmVyaWZ5IjogdHJ1ZSwKICAgICJzbmkiOiAiIgp9
+trojan://humanity@104.18.152.219:443?allowInsecure=0&sni=www.ignitelimit.com&ws=1&wspath=%2Fassignment#%F0%9F%87%B7%F0%9F%87%BA%20RU%E4%BF%84%E7%BD%97%E6%96%AF%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
