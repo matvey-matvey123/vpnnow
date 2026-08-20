@@ -21,6 +21,18 @@ class VPNChecker:
         self.timeout = self.config['timeout']
         self.output_file = self.config['output_file']
         
+        # Российские прокси для проверки
+        self.russian_proxies = [
+            "http://45.8.158.176:10801",
+            "http://31.172.67.43:443",
+            "http://171.22.134.12:443",
+            "http://185.246.152.159:443",
+            "http://91.132.197.5:443",
+            "http://65.21.240.108:443",
+            "http://65.109.134.191:80",
+            "http://95.216.186.191:80"
+        ]
+        
     def load_subscriptions(self) -> List[str]:
         subscriptions = []
         try:
@@ -34,9 +46,17 @@ class VPNChecker:
             sys.exit(1)
         return subscriptions
     
-    def fetch_subscription(self, url: str) -> str:
+    def fetch_subscription_via_proxy(self, url: str, proxy: str = None) -> str:
+        """Загрузка подписки через прокси"""
         try:
-            response = requests.get(url, timeout=10, verify=False, headers={'User-Agent': 'Mozilla/5.0'})
+            proxies = {'http': proxy, 'https': proxy} if proxy else None
+            response = requests.get(
+                url, 
+                timeout=15, 
+                verify=False, 
+                headers={'User-Agent': 'Mozilla/5.0'},
+                proxies=proxies
+            )
             if response.status_code == 200:
                 content = response.text
                 if self.is_base64(content):
@@ -47,6 +67,22 @@ class VPNChecker:
                 return content
         except:
             pass
+        return ""
+    
+    def fetch_subscription(self, url: str) -> str:
+        """Загрузка подписки с fallback на прокси"""
+        # Сначала пробуем напрямую
+        content = self.fetch_subscription_via_proxy(url)
+        if content:
+            return content
+        
+        # Если не получилось, пробуем через российские прокси
+        for proxy in self.russian_proxies:
+            content = self.fetch_subscription_via_proxy(url, proxy)
+            if content:
+                print(f"Loaded via proxy: {proxy}")
+                return content
+        
         return ""
     
     def is_base64(self, s: str) -> bool:
@@ -61,10 +97,7 @@ class VPNChecker:
     def decode_name(self, name: str) -> str:
         """Декодирование имени сервера"""
         try:
-            # Декодируем URL-encoded
             decoded = unquote(name)
-            # Декодируем Unicode escape sequences
-            decoded = decoded.encode('utf-8').decode('unicode_escape', errors='ignore')
             return decoded
         except:
             return name
@@ -93,7 +126,6 @@ class VPNChecker:
     def parse_vless(self, config: str) -> Dict:
         try:
             if config.startswith('vless://'):
-                # Расширенный regex для разных форматов
                 match = re.match(r'vless://([^@]+)@([^:]+):(\d+)(?:\?([^#]*))?(?:#(.*))?', config)
                 if match:
                     uuid, server, port, params, name = match.groups()
@@ -152,7 +184,6 @@ class VPNChecker:
         """Улучшенное определение страны"""
         name_lower = name.lower()
         
-        # Расширенный список ключевых слов
         country_map = {
             'netherlands': ['netherlands', 'nl', 'holland', 'нидерланд', 'amsterdam', '🇳🇱'],
             'ukraine': ['ukraine', 'ua', 'ukr', 'украин', 'kyiv', 'kiev', '🇺🇦'],
@@ -173,30 +204,116 @@ class VPNChecker:
             'russia': ['russia', 'ru', 'росси', 'moscow', 'москв', '🇷🇺']
         }
         
+        # Сначала проверяем полные названия
         for country in self.countries:
             for keyword in country_map.get(country, []):
                 if keyword in name_lower:
                     return country
+        
+        # Если не нашли, пробуем по IP
         return 'unknown'
     
-    def check_server(self, server_info: Dict) -> Tuple[Dict, bool]:
+    def check_server_from_russia(self, server_info: Dict) -> Tuple[Dict, bool]:
+        """Проверка сервера через российские прокси"""
+        server = server_info['server']
+        port = server_info['port']
+        
+        # Сначала пробуем напрямую
+        if self.check_tcp(server, port):
+            return server_info, True
+        
+        # Если напрямую не работает, пробуем через российские прокси
+        for proxy_addr in self.russian_proxies:
+            try:
+                # Извлекаем IP и порт прокси
+                proxy_ip = proxy_addr.replace('http://', '').split(':')[0]
+                proxy_port = int(proxy_addr.replace('http://', '').split(':')[1])
+                
+                # Проверяем через SOCKS5 прокси
+                import socks
+                socks.set_default_proxy(socks.SOCKS5, proxy_ip, proxy_port)
+                socket.socket = socks.socksocket
+                
+                if self.check_tcp(server, port):
+                    return server_info, True
+            except:
+                continue
+        
+        return server_info, False
+    
+    def check_tcp(self, server: str, port: int) -> bool:
+        """Простая проверка TCP соединения"""
         try:
-            server = server_info['server']
-            port = server_info['port']
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            sock.settimeout(2)  # Уменьшаем таймаут для скорости
+            sock.settimeout(2)
             result = sock.connect_ex((server, port))
             sock.close()
-            return server_info, result == 0
+            return result == 0
         except:
-            return server_info, False
+            return False
+    
+    def check_server(self, server_info: Dict) -> Tuple[Dict, bool]:
+        """Основная проверка сервера"""
+        # Пробуем разные способы проверки
+        methods = [
+            self.check_tcp,
+            lambda s, p: self.check_tcp_via_proxy(s, p),
+            lambda s, p: self.check_tcp_via_http(s, p)
+        ]
+        
+        for method in methods:
+            try:
+                if method(server_info['server'], server_info['port']):
+                    return server_info, True
+            except:
+                continue
+        
+        return server_info, False
+    
+    def check_tcp_via_proxy(self, server: str, port: int) -> bool:
+        """Проверка через HTTP прокси"""
+        for proxy in self.russian_proxies:
+            try:
+                import socks
+                proxy_ip = proxy.replace('http://', '').split(':')[0]
+                proxy_port = int(proxy.replace('http://', '').split(':')[1])
+                
+                socks.set_default_proxy(socks.SOCKS5, proxy_ip, proxy_port)
+                socket.socket = socks.socksocket
+                
+                sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                sock.settimeout(3)
+                result = sock.connect_ex((server, port))
+                sock.close()
+                
+                if result == 0:
+                    return True
+            except:
+                continue
+        return False
+    
+    def check_tcp_via_http(self, server: str, port: int) -> bool:
+        """Проверка через HTTP запрос"""
+        for proxy in self.russian_proxies:
+            try:
+                response = requests.get(
+                    f"http://{server}:{port}",
+                    timeout=3,
+                    proxies={'http': proxy, 'https': proxy},
+                    verify=False
+                )
+                if response.status_code < 500:
+                    return True
+            except:
+                continue
+        return False
     
     def process_subscriptions(self):
         print("Loading subscriptions...")
         subscriptions = self.load_subscriptions()
         
         all_servers = []
-        seen_servers = set()  # Для удаления дубликатов
+        seen_servers = set()
         
         for sub_url in subscriptions:
             print(f"Processing: {sub_url[:50]}...")
@@ -219,7 +336,6 @@ class VPNChecker:
                         server = self.parse_shadowsocks(line)
                     
                     if server and server['country'] in self.countries:
-                        # Удаляем дубликаты
                         server_key = f"{server['server']}:{server['port']}"
                         if server_key not in seen_servers:
                             seen_servers.add(server_key)
@@ -237,7 +353,7 @@ class VPNChecker:
             
             for future in as_completed(futures):
                 try:
-                    server_info, is_working = future.result(timeout=5)
+                    server_info, is_working = future.result(timeout=10)
                     checked += 1
                     
                     if is_working and server_info['country'] in self.countries:
