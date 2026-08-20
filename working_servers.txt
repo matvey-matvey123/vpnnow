@@ -1,18 +1,16 @@
-# Рабочие VPN серверы
-# Дата проверки: 2026-08-20 07:40:06
-# Всего рабочих серверов: 99
+
 
 ## NETHERLANDS (10 серверов)
-  - VLESS | 45.128.235.158:8443 | %F0%9F%87%AB%F0%9F%87%AE%20Finland%2C%20Helsinki%20%7C%20%5BBL%5D
-  - VLESS | 144.31.82.201.fwqfw783rg2dad.website:443 | %F0%9F%87%AB%F0%9F%87%AE%20Finland%2C%20Helsinki%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
-  - VLESS | 45.128.235.158:8443 | %F0%9F%87%AB%F0%9F%87%AE%20Finland%2C%20Helsinki%20%7C%20%5BBL%5D
-  - VLESS | finnode3.frost-api.com:443 | %F0%9F%87%AB%F0%9F%87%AE%20Finland%2C%20Helsinki%20%7C%20%5BBL%5D
-  - VLESS | finnode3.frost-api.com:443 | %F0%9F%87%AB%F0%9F%87%AE%20Finland%2C%20Helsinki%20%7C%20%5BBL%5D
-  - VLESS | alya.chick-team.ru:6450 | %F0%9F%87%AB%F0%9F%87%AE%20Finland%2C%20Helsinki%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
-  - VLESS | 217.60.35.41:443 | %F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%2C%20Amsterdam%20%7C%20%5BBL%5D
-  - VLESS | nl2.noode.work:443 | %F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%2C%20Amsterdam%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
-  - VLESS | 167.104.217.47:443 | %F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%2C%20Eygelshoven%20%7C%20%5BBL%5D
-  - VLESS | nl-cdn.ru:443 | %F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%2C%20Amsterdam%20%7C%20%5BBL%5D
+  VLESS | 45.128.235.158:8443 | %F0%9F%87%AB%F0%9F%87%AE%20Finland%2C%20Helsinki%20%7C%20%5BBL%5D
+  VLESS | 144.31.82.201.fwqfw783rg2dad.website:443 | %F0%9F%87%AB%F0%9F%87%AE%20Finland%2C%20Helsinki%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
+  VLESS | 45.128.235.158:8443 | %F0%9F%87%AB%F0%9F%87%AE%20Finland%2C%20Helsinki%20%7C%20%5BBL%5D
+  VLESS | finnode3.frost-api.com:443 | %F0%9F%87%AB%F0%9F%87%AE%20Finland%2C%20Helsinki%20%7C%20%5BBL%5D
+  VLESS | finnode3.frost-api.com:443 | %F0%9F%87%AB%F0%9F%87%AE%20Finland%2C%20Helsinki%20%7C%20%5BBL%5D
+  VLESS | alya.chick-team.ru:6450 | %F0%9F%87%AB%F0%9F%87%AE%20Finland%2C%20Helsinki%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
+  VLESS | 217.60.35.41:443 | %F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%2C%20Amsterdam%20%7C%20%5BBL%5D
+  VLESS | nl2.noode.work:443 | %F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%2C%20Amsterdam%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
+  VLESS | 167.104.217.47:443 | %F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%2C%20Eygelshoven%20%7C%20%5BBL%5D
+  VLESS | nl-cdn.ru:443 | %F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%2C%20Amsterdam%20%7C%20%5BBL%5D
 
 ## GERMANY (10 серверов)
   - VLESS | 45.154.98.72:1000 | %F0%9F%87%A9%F0%9F%87%AA%20Germany%2C%20D%C3%BCsseldorf%20%28Stadtbezirk%20IX%29%20%7C%20%F0%9F%8C%90%20%7C%20%5BBL%5D
